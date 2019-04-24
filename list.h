@@ -2,6 +2,9 @@
 #define LIST_H
 
 #include "node.h"
+#include <string>
+
+using namespace std;
 
 template <typename T>
 class List {

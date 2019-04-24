@@ -2,7 +2,7 @@
 
 void Tester::execute() {
     Collection collections[] = { forward_list, linked_list, circular_list };
-    size_t numberOfCollections = sizeof(collections) / sizeof(collections[0]);
+    int numberOfCollections = sizeof(collections) / sizeof(collections[0]);
 
     for (int i = 0; i < numberOfCollections; i++) {
         for (int j = 0; j < NUMBER_OF_TESTS; ++j) {
@@ -38,7 +38,6 @@ void Tester::testList(Collection collection) {
     unsigned int size = mocker.generateRandomInt(10);
     T* elements = mocker.generateRandomArray<T>(size);
     List<T>* list = getCollection<T>(collection);
-    List<T>* list1 = getCollection<T>(collection);
 
     ASSERT(list->size() == 0, "The " + list->name() + " size is not working");
     ASSERT(list->empty() == true, "The " + list->name() + " empty is not working");

@@ -24,7 +24,7 @@ class Mocker {
         template <typename T>
         T* generateRandomArray(unsigned int size) {
             T *elements = new T[size];
-            for (int i = 0; i < size; i++) {
+            for (unsigned int i = 0; i < size; i++) {
                 if (is_same<T, int>::value) {
                     elements[i] = generateRandomInt();
                 }

@@ -7,6 +7,8 @@ struct Node {
     Node<T>* next;
     Node<T>* prev;
 
+    Node(T data) : data(data), next(nullptr), prev(nullptr) {};
+
     void killSelf() {
         // TODO
     }
