@@ -24,6 +24,7 @@ class ForwardIterator : public Iterator<T> {
         }
 
         ForwardIterator<T> operator++() {
+            // Estás creando nuevos iteradores con cada ++
             return ForwardIterator<T>(current->next);
         }
 

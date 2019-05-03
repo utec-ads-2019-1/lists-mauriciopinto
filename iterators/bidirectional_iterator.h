@@ -24,10 +24,12 @@ class BidirectionalIterator : public Iterator<T> {
         }
 
         BidirectionalIterator<T> operator++() {
+                // Estás creando nuevos iteradores con cada ++
             return BidirectionalIterator<T>(current->next);
         }
 
         BidirectionalIterator<T> operator--() {
+                // Estás creando nuevos iteradores con cada --
                 return BidirectionalIterator<T>(current->prev);
         }
 

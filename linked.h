@@ -10,7 +10,7 @@ class LinkedList : public List<T> {
         LinkedList() : List<T>() {}
 
         T front() {
-                if(head){
+                if(this->head){
                         return this->head->data;
                 }
                 else{
@@ -19,7 +19,7 @@ class LinkedList : public List<T> {
         }
 
         T back() {
-                if(tail){
+                if(this->tail){
                         return this->tail->data;
                 }
                 else{
@@ -29,7 +29,8 @@ class LinkedList : public List<T> {
 
         void push_front(T value) {
             auto* newHead = new Node<T>(value);
-            if(head){
+            // Tienes que agregar this-> a todos los atributos
+            if(this->head){
                 newHead->next = this->head;
                 newHead->prev = this->tail;
                 this->head->prev = newHead;

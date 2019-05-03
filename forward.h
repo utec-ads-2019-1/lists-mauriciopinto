@@ -19,6 +19,7 @@ public:
     }
 
     T back() {
+            // Falta agregar la misma restricción del front
             return this->tail->data;
     }
 
@@ -84,6 +85,7 @@ public:
     }
 
     bool empty() {
+            // Puede ser: return head == nullptr;
             if(head){
                     return false;
             }
